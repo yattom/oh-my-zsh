@@ -74,3 +74,14 @@ fi
 
 # automatically load bash completion functions
 autoload -U +X bashcompinit && bashcompinit
+
+# my addition from original .zshrc
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "" history-beginning-search-backward-end
+bindkey "" history-beginning-search-forward-end
+bindkey "" history-incremental-search-backward
+bindkey '[A' up-line-or-search
+bindkey '[B' down-line-or-search
+
